@@ -33,3 +33,22 @@
 5. sibsp 와 parch를 합쳐 탑승한 가족의 수를 구했다.
 6. fare칼럼은 로그를 취해 비대칭성을 해결했다. (전처리단계)
 
+### 3. Feature Engineering
+- train 데이터에는 Age, Cabin, Embarked
+- test 데이터에는 Age, Cabin에서 결측치를 발견
+- str extract 정규표현식 사용해서 성을 따로 추출한다.
+- 나이에 따라 initial이 다르기 때문에 Age 결측치들은 initial을 보고 평균값으로 대체.
+- embarked는 S로 채움.
+
+### 4. 모델 개발 및 학습
+- train, test set 분리. 
+- validation 나누기(validation size = 0.2%)
+- RandomForest 모델 학습 및 검증
+- NN모델 학습 및 검증
+
+### 5. 모델 학습 결과 (kaggle 제출 기준)
+- RandomForest 모델은 0.74162
+- NN 모델은 0.75837
+
+
+
